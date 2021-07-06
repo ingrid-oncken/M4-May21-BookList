@@ -1,21 +1,20 @@
 import { Col, Container, Carousel, Figure, Row } from "react-bootstrap"
 import fantasyBooks from "../data/fantasy.json"
-// import horrorBooks from "../data/history.json"
-// import scifiBooks from "../data/scifi.json"
+import horrorBooks from "../data/history.json"
+import scifiBooks from "../data/scifi.json"
 
 const LatestRelease = () => (
   <Container>
     <Carousel>
-      <Carousel.Item>
+      <Carousel.Item classList="my-3">
+        <h4>Latest Release</h4>
         <Row>
           {fantasyBooks
-            .filter((book, index) => index < 5)
+            .filter((book, index) => index < 4)
             .map((book) => (
               <Col xs={12} md={4} lg={3}>
                 <img
-                  // width={85}
-                  // height={90}
-                  // className="d-block w-100"
+                  className="d-block w-100"
                   src={book.img}
                   alt={book.title}
                 />
@@ -23,10 +22,10 @@ const LatestRelease = () => (
             ))}
         </Row>
       </Carousel.Item>
-      {/* <Carousel.Item>
+      <Carousel.Item classList="my-3">
         <Row>
           {horrorBooks
-            .filter((book, index) => index < 12)
+            .filter((book, index) => index < 4)
             .map((book) => (
               <Col xs={12} md={4} lg={3}>
                 <img
@@ -38,10 +37,10 @@ const LatestRelease = () => (
             ))}
         </Row>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item classList="my-3">
         <Row>
           {scifiBooks
-            .filter((book, index) => index < 12)
+            .filter((book, index) => index < 4)
             .map((book) => (
               <Col xs={12} md={4} lg={3}>
                 <img
@@ -52,7 +51,7 @@ const LatestRelease = () => (
               </Col>
             ))}
         </Row>
-      </Carousel.Item>*/}
+      </Carousel.Item>
     </Carousel>
   </Container>
 )

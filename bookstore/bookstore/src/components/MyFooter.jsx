@@ -2,31 +2,25 @@ import { Container, Col, Row } from "react-bootstrap"
 
 const MyFooter = () => (
   <footer
-    className="fixed-bottom text-white"
+    className="text-white"
     expand="lg"
     style={{ backgroundColor: "gray" }}
   >
-    <Container className="mt-3">
+    <Container>
       <Row>
         <Col>
           <ul>
             <li>Line one</li>
-            <li>Line two</li>
-            <li>Line three</li>
           </ul>
         </Col>
         <Col>
           <ul>
             <li>Line one</li>
-            <li>Line two</li>
-            <li>Line three</li>
           </ul>
         </Col>
         <Col>
           <ul>
             <li>Line one</li>
-            <li>Line two</li>
-            <li>Line three</li>
           </ul>
         </Col>
       </Row>
