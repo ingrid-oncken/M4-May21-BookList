@@ -1,7 +1,8 @@
-import { Col, Container, Carousel, Figure, Row } from "react-bootstrap"
+import { Col, Container, Carousel, Row } from "react-bootstrap"
 import fantasyBooks from "../data/fantasy.json"
 import horrorBooks from "../data/history.json"
 import scifiBooks from "../data/scifi.json"
+import MyBadge from "../components/MyBadge"
 
 const LatestRelease = () => (
   <Container>
@@ -18,6 +19,7 @@ const LatestRelease = () => (
                   src={book.img}
                   alt={book.title}
                 />
+                <MyBadge price={book.price}/>
               </Col>
             ))}
         </Row>
