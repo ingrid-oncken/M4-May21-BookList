@@ -3,21 +3,23 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import MyNav from "./components/MyNav"
 import MyFooter from "./components/MyFooter"
 import MyJumbo from "./components/MyJumbo"
-import LatestRelease from "./components/LatestRelease"
-import WarningSign from "./components/WarningSign"
-import SingleBook from "./components/SingleBook"
+// import LatestRelease from "./components/LatestRelease"
+// import WarningSign from "./components/WarningSign"
+// import SingleBook from "./components/SingleBook"
 import BookList from "./components/BookList"
-import horrorBooks from "./data/horror.json"
+// import horrorBooks from "./data/horror.json"
 import romanceBooks from "./data/romance.json"
+
 
 function App() {
   return (
     <div className="App">
       <MyNav />
       <MyJumbo />
-      <WarningSign color="danger" text="THIS IS AN ALERT" />
+      {/* <ModalFoo /> */}
+      {/* <WarningSign color="danger" text="THIS IS AN ALERT" />
       <SingleBook {...horrorBooks[0]} />
-      <LatestRelease />
+      <LatestRelease /> */}
       <BookList bookArray={romanceBooks} />
       <MyFooter />
     </div>
