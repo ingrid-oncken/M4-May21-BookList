@@ -18,9 +18,9 @@ class BookList extends Component {
       props.map() is needed */}
           {this.props.bookArray.slice(1, 10).map((oneBook) => (
             //xs={3} is grid system notation for displaying 4 books
-            <Col xs={4} className='my-3'>
+            <Col xs={4} className="my-3">
               {/* 
-               {...oneBook} => img=oneBook.img title=oneBook.title
+               {...oneBook} => img={oneBook.img} title={oneBook.title}
               */}
               <SingleBook {...oneBook} />
             </Col>

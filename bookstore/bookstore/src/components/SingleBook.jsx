@@ -25,7 +25,7 @@ class SingleBook extends Component {
           </Card.Body>
         </Card>
         {/* Both of this need to be true,  */}
-        {this.state.selected && <CommentArea />}
+        {this.state.selected && <CommentArea pizza={this.props.book.asin} />}
       </>
     )
   }

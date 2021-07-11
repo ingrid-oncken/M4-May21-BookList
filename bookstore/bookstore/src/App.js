@@ -10,16 +10,15 @@ import BookList from "./components/BookList"
 // import horrorBooks from "./data/horror.json"
 import romanceBooks from "./data/romance.json"
 
-
 function App() {
   return (
     <div className="App">
       <MyNav />
       <MyJumbo />
       {/* <ModalFoo /> */}
-      {/* <WarningSign color="danger" text="THIS IS AN ALERT" />
-      <SingleBook {...horrorBooks[0]} />
-      <LatestRelease /> */}
+      {/* <WarningSign color="danger" text="THIS IS AN ALERT" /> */}
+      {/* <SingleBook {...horrorBooks[0]} /> */}
+      {/* <LatestRelease /> */}
       <BookList bookArray={romanceBooks} />
       <MyFooter />
     </div>
