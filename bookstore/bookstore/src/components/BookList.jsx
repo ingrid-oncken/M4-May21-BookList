@@ -34,15 +34,23 @@ class BookList extends Component {
         <Row>
           {/* inside this row multiple single cards will be displayed so 
       props.map() is needed */}
-          {this.props.bookArray.slice(1, 10).map((oneBook) => (
-            //xs={3} is grid system notation for displaying 4 books
-            <Col xs={4} className="my-3">
-              {/* 
+          {
+            this.props.pizza
+              .filter((oneBook) =>
+                oneBook.title
+                  .toLowerCase()
+                  .includes(this.state.searchQuery.toLowerCase())
+              )
+              .map((filteredBook) => (
+                <Col xs={4} className="my-3" key={filteredBook.asin}>
+                  {/* 
                {...oneBook} => img={oneBook.img} title={oneBook.title}
               */}
-              <SingleBook {...oneBook} />
-            </Col>
-          ))}
+                  <SingleBook book={filteredBook} />
+                </Col>
+              ))
+            //xs={3} is grid system notation for displaying 4 books
+          }
         </Row>
       </Container>
     )

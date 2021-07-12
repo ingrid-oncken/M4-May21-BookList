@@ -1,6 +1,7 @@
 //comment area gotta have comment are and comment list
 
 import React, { Component } from "react"
+import { ListGroup } from "react-bootstrap"
 
 class CommentArea extends Component {
   // everytime that fetches we need to make room for the data, so state is needed
@@ -12,7 +13,7 @@ class CommentArea extends Component {
     try {
       const resp = await fetch(
         "https://striveschool-api.herokuapp.com/api/comments/" +
-          this.props.pizza,
+          this.props.pizzaCalabreza,
         {
           headers: {
             Authorization:
@@ -20,14 +21,27 @@ class CommentArea extends Component {
           },
         }
       )
-      console.log(resp)
+      const data = await resp.json()
+      this.setState({
+        comments: data,
+      })
+
+      console.log(data)
     } catch (error) {
       console.log(`This is CATCH error ${error}`)
     }
   }
 
   render() {
-    return <div>{/* object with comment list */}</div>
+    return (
+      <ListGroup>
+        {this.state.comments.map((oneComment) => (
+          <ListGroup.Item key={oneComment._id}>
+            {oneComment.comment}
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
+    )
   }
 }
 

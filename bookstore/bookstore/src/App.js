@@ -19,7 +19,7 @@ function App() {
       {/* <WarningSign color="danger" text="THIS IS AN ALERT" /> */}
       {/* <SingleBook {...horrorBooks[0]} /> */}
       {/* <LatestRelease /> */}
-      <BookList bookArray={romanceBooks} />
+      <BookList pizza={romanceBooks} />
       <MyFooter />
     </div>
   )

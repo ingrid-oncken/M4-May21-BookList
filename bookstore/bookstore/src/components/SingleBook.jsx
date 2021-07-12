@@ -12,10 +12,10 @@ class SingleBook extends Component {
       <>
         <Card style={{ width: "18rem" }}>
           {/* <h5>THIS IS SINGLEBOOK</h5> */}
-          <Card.Img variant="top" src={this.props.img} />
+          <Card.Img variant="top" src={this.props.book.img} />
           <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
-            <Card.Text>Book id: {this.props.asin}</Card.Text>
+            <Card.Title>{this.props.book.title}</Card.Title>
+            <Card.Text>Book id: {this.props.book.asin}</Card.Text>
             <Button
               variant="primary"
               onClick={() => this.setState({ selected: !this.state.selected })}
@@ -25,7 +25,9 @@ class SingleBook extends Component {
           </Card.Body>
         </Card>
         {/* Both of this need to be true,  */}
-        {this.state.selected && <CommentArea pizza={this.props.book.asin} />}
+        {this.state.selected && (
+          <CommentArea pizzaCalabreza={this.props.book.asin} />
+        )}
       </>
     )
   }
